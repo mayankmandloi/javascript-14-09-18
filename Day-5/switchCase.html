@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    var num1=1*window.prompt("Enter 1st number");
+    var num2=1*window.prompt("Enter 2nd number");
+    var oper=window.prompt("enter 'add' for addition 'sub' for subtraction 'mul' and 'div' to multiply and divide");
+
+/*
+        if(oper=="add")
+        {
+            window.alert(num1+num2);
+        }
+        else if(oper=="sub")
+        {
+            window.alert(num1-num2);
+        }
+        else if(oper=="mul"){
+            window.alert(num1*num2);
+        }
+        else if(oper=="div")
+        {
+            window.alert(num1/num2);
+        }
+        else
+        {
+            window.alert("Wrong Choice");
+        }
+
+*/
+
+
+
+        switch(oper)
+        {
+            case "add":
+            case "ADD":
+                window.alert(num1+num2);
+                break;
+            case "sub":
+                window.alert(num1-num2);
+                break;
+            case "mul":
+                window.alert(num1*num2);
+                break;
+            case "div":
+                window.alert(num1/num2);
+                break;
+            default:
+                window.alert("Wrong Choice");
+        }
+    </script>
+</body>
+</html>
