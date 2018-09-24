@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    button
+    {
+        height: 40px;
+        width: 57px;
+    }
+    </style>
+</head>
+<body>
+    
+
+    <input type="text" name="" id="input">
+    <br>
+    <button onclick="del()" style="width:120px">AC</button>
+    <button onclick="insNumber('%')">%</button>
+    <button onclick="insNumber('/')">÷</button>
+    <br>
+    <button onclick="insNumber(7)">7</button>
+    <button onclick="insNumber(8)">8</button>
+    <button onclick="insNumber(9)">9</button>
+    <button onclick="insNumber('*')">x</button>
+    <br>
+    <button onclick="insNumber(4)">4</button>
+    <button onclick="insNumber(5)">5</button>
+    <button onclick="insNumber(6)">6</button>
+    <button onclick="insNumber('-')">-</button>
+    <br>
+    <button onclick="insNumber(1)">1</button>
+    <button onclick="insNumber(2)">2</button>
+    <button onclick="insNumber(3)">3</button>
+    <button onclick="insNumber('+')">+</button>
+    <br>
+    <button onclick="insNumber(0)">0</button>
+    <button onclick="insNumber('.')">.</button>
+    <button onclick="solve()" style="width:120px">=</button>
+    
+    
+    
+
+
+    <script>
+    function insNumber(number)
+    {
+        document.getElementById("input").value+=number;
+    }
+    function solve()
+    {
+        document.getElementById("input").value=eval(document.getElementById("input").value);
+    }
+    function del()
+    {
+        document.getElementById("input").value="";
+    }
+    
+   
+
+    </script>
+
+</body>
+</html>
