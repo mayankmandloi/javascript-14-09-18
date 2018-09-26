@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,77 +8,96 @@
     <title>Document</title>
 
     <style>
-    table,td,th
-    {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .redcolor {
+            color: red;
+        }
     </style>
 </head>
+
 <body>
     <table>
         <thead>
-        <tr>
-            <th>Name</th>
-            <th>Number</th>
-            <th>Address</th>
-        </tr>
-    </thead>
-    <tbody id="main">
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="main">
 
 
-    </tbody>
+        </tbody>
     </table>
-    
+<hr><hr><hr>
+
+<ul id=list>
+
+</ul>
 
     <script>
-    
-    var Students=[
-                  {name:"Varun",number:123,address:"Indore"},
-                  {name:"Bhavesh",number:2342,address:"Indore"},
-                  {name:"Deepesh",number:12123,address:"Indore"},
-                  {name:"Satyam",number:112323,address:"Indore"},
-                  {name:"Ayush",number:123865,address:"Indore"},
-                  {name:"Hemant",number:123823,address:"Indore"},
-                  {name:"Shital",number:256123,address:"Indore"},
-                  {name:"Sonu",number:84123,address:"Indore"},
-                  {name:"Manju",number:96123,address:"Indore"}, 
-                  {name:"Varun",number:123,address:"Indore"},
-                  {name:"Bhavesh",number:2342,address:"Indore"},
-                  {name:"Deepesh",number:12123,address:"Indore"},
-                  {name:"Satyam",number:112323,address:"Indore"},
-                  {name:"Ayush",number:123865,address:"Indore"},
-                  {name:"Hemant",number:123823,address:"Indore"},
-                  {name:"Shital",number:256123,address:"Indore"},
-                  {name:"Sonu",number:84123,address:"Indore"},
-                  {name:"Manju",number:96123,address:"Indore"},
-                  {name:"Varun",number:123,address:"Indore"},
-                  {name:"Bhavesh",number:2342,address:"Indore"},
-                  {name:"Deepesh",number:12123,address:"Indore"},
-                  {name:"Satyam",number:112323,address:"Indore"},
-                  {name:"Ayush",number:123865,address:"Indore"},
-                  {name:"Hemant",number:123823,address:"Indore"},
-                  {name:"Shital",number:256123,address:"Indore"},
-                  {name:"Sonu",number:84123,address:"Indore"},
-                  {name:"Manju",number:96123,address:"Indore"}
-                  ];
 
-                  for(i=0;i<Students.length;i++)
-                  {
-                      var row = document.createElement("tr");
-                     
-                      var tdata1=document.createElement("td");
-                      var tdata2=document.createElement("td");
-                      var tdata3=document.createElement("td");
-                    tdata1.innerHTML=Students[i].name;
-                    tdata2.innerHTML=Students[i].number;
-                    tdata3.innerHTML=Students[i].address;
-                    row.appendChild(tdata1);
-                    row.appendChild(tdata2);
-                    row.appendChild(tdata3);
+        var Students = [
+            { name: "Varun", number: 123, address: "Indore" },
+            { name: "Bhavesh", number: 2342, address: "Indore" },
+            { name: "Deepesh", number: 12123, address: "Indore" },
+            { name: "Satyam", number: 112323, address: "Indore" },
+            { name: "Ayush", number: 123865, address: "Indore" },
+            { name: "Hemant", number: 123823, address: "Indore" },
+            { name: "Shital", number: 256123, address: "Indore" },
+            { name: "Sonu", number: 84123, address: "Indore" },
+            { name: "Manju", number: 96123, address: "Indore" },
+            { name: "Varun", number: 123, address: "Indore" },
+            { name: "Bhavesh", number: 2342, address: "Indore" },
+            { name: "Deepesh", number: 12123, address: "Indore" },
+            { name: "Satyam", number: 112323, address: "Indore" },
+            { name: "Ayush", number: 123865, address: "Indore" },
+            { name: "Hemant", number: 123823, address: "Indore" },
+            { name: "Shital", number: 256123, address: "Indore" },
+            { name: "Sonu", number: 84123, address: "Indore" },
+            { name: "Manju", number: 96123, address: "Indore" },
+            { name: "Varun", number: 123, address: "Indore" },
+            { name: "Bhavesh", number: 2342, address: "Indore" },
+            { name: "Deepesh", number: 12123, address: "Indore" },
+            { name: "Satyam", number: 112323, address: "Indore" },
+            { name: "Ayush", number: 123865, address: "Indore" },
+            { name: "Hemant", number: 123823, address: "Indore" },
+            { name: "Shital", number: 256123, address: "Indore" },
+            { name: "Sonu", number: 84123, address: "Indore" },
+            { name: "Manju", number: 96123, address: "Indore" }
+        ];
 
-                    document.getElementById("main").appendChild(row);
-                  }
+        for (i = 0; i < Students.length; i++) {
+            var row = document.createElement("tr");
+            row.className = "redcolor";
+            var tdata1 = document.createElement("td");
+            var tdata2 = document.createElement("td");
+            var tdata3 = document.createElement("td");
+            tdata1.innerHTML = Students[i].name;
+            tdata2.innerHTML = Students[i].number;
+            tdata3.innerHTML = Students[i].address;
+            row.appendChild(tdata1);
+            row.appendChild(tdata2);
+            row.appendChild(tdata3);
+
+            document.getElementById("main").appendChild(row);
+        }
+
+        for(i=0;i<Students.length;i++)
+        {
+            var listitem=document.createElement("li");
+            listitem.innerHTML=Students[i].name;
+            document.getElementById("list").appendChild(listitem);   
+        }
+
+
     </script>
 </body>
+
 </html>
