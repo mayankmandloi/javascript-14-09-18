@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .book
+        {
+            width: 32%;
+            float: left;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            padding: 2px;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div id="main">
+
+    </div>
+    <script>
+    var Books=[{"ID":2594711238,"Title":"Sams Teach Yourself PHP, MySQL and Apache All in One, 5th Edition","Description":"In just a short time, you can learn how to use PHP, MySQL, and Apache together to create dynamic, interactive websites and applications using the three leading open-source web development technologies. Using a straightforward, step-by-step approach, ...","Image":"http://s.it-ebooks-api.info/12/sams_teach_yourself_php_mysql_and_apache_all_in_one_5th_edition.jpg","isbn":"9780672335433"},
+    
+    {"ID":568072305,"Title":"Head First PHP & MySQL","Description":"If you're ready to create web pages more complex than what you can build with HTML and CSS, Head First PHP & MySQL is the ultimate learning guide to building dynamic, database-driven websites using PHP and MySQL. Packed with real-world examples, this ...","Image":"http://s.it-ebooks-api.info/3/head_first_php__mysql.jpg","isbn":"9780596006303"},
+    
+    {"ID":4081260866,"Title":"PHP & MySQL: Novice to Ninja, 5th Edition","SubTitle":"The Easy Way to Build Your Own Database Driven Website","Description":"PHP & MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you'll learn how to use PHP (used on 20 million sites worldwide) to build your ...","Image":"http://s.it-ebooks-api.info/7/php__mysql_novice_to_ninja_5th_edition.jpg","isbn":"9780987153081"},
+    
+    {"ID":1061052283,"Title":"Learning PHP, MySQL, and JavaScript","SubTitle":"A Step-by-Step Guide to Creating Dynamic Websites","Description":"If you know HTML, this guide will have you building interactive websites quickly. You'll learn how to create responsive, data-driven websites with PHP, MySQL, and JavaScript, regardless of whether you already know how to program. Discover how the pow ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_and_javascript.jpg","isbn":"9780596157135"},
+    
+    {"ID":112178230,"Title":"Learning PHP, MySQL, JavaScript, and CSS, 2nd Edition","SubTitle":"A Step-by-Step Guide to Creating Dynamic Websites","Description":"Learn how to build interactive, data-driven websites - even if you don't have any previous programming experience. If you know how to build static sites with HTML, this popular guide will help you tackle dynamic web programming. You'll get a thorough ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_javascript_and_css_2nd_edition.jpg","isbn":"9781449319267"},
+    
+    {"ID":1033976387,"Title":"Learning PHP, MySQL, JavaScript, CSS & HTML5, 3rd Edition","SubTitle":"A Step-by-Step Guide to Creating Dynamic Websites","Description":"Build interactive, data-driven websites with the potent combination of open-source technologies and web standards, even if you only have basic HTML knowledge. With this popular hands-on guide, you'll tackle dynamic web programming with the help of to ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_javascript_css__html5_3rd_edition.jpg","isbn":"9781491949467"},
+    
+    {"ID":1348922840,"Title":"Sams Teach Yourself PHP, MySQL & JavaScript All in One, 6th Edition","Description":"In just a short time, you can learn how to use PHP, MySQL, and JavaScript together to create dynamic, interactive websites and applications using three leading web development technologies.nnNo previous programming experience is required. Using a s ...","Image":"http://s.it-ebooks-api.info/12/php_mysql_javascript_all_in_one_6th_edition.jpg","isbn":"9780672337703"}
+    
+    ,{"ID":2608239171,"Title":"Learning PHP, MySQL & JavaScript, 4th Edition","SubTitle":"With jQuery, CSS & HTML5","Description":"Build interactive, data-driven websites with the potent combination of open-source technologies and web standards, even if you have only basic HTML knowledge. With this popular hands-on guide, you'll tackle dynamic web programming with the help of to ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql__javascript_4th_edition.jpg","isbn":"9781491918661"},
+    
+    {"ID":3498693948,"Title":"PHP, MySQL & JavaScript All-in-One For Dummies","Description":"It takes a powerful suite of technologies to drive the most-visited websites in the world. PHP, mySQL, JavaScript, and other web-building languages serve as the foundation for application development and programming projects at all levels of the web. ...","Image":"http://s.it-ebooks-api.info/9/php_mysql_javascript_all-in-one_for_dummies.jpg","isbn":"9781119468387"},
+    
+    {"ID":2518258989,"Title":"Learning PHP, MySQL & JavaScript, 5th Edition","SubTitle":"With jQuery, CSS & HTML5","Description":"Build interactive, data-driven websites with the potent combination of open source technologies and web standards, even if you have only basic HTML knowledge. In this update to this popular hands-on guide, you'll tackle dynamic web programming with t ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_javascript_5th_edition.jpg","isbn":"9781491978917"},
+    {"ID":2594711238,"Title":"Sams Teach Yourself PHP, MySQL and Apache All in One, 5th Edition","Description":"In just a short time, you can learn how to use PHP, MySQL, and Apache together to create dynamic, interactive websites and applications using the three leading open-source web development technologies. Using a straightforward, step-by-step approach, ...","Image":"http://s.it-ebooks-api.info/12/sams_teach_yourself_php_mysql_and_apache_all_in_one_5th_edition.jpg","isbn":"9780672335433"},
+    
+    {"ID":568072305,"Title":"Head First PHP & MySQL","Description":"If you're ready to create web pages more complex than what you can build with HTML and CSS, Head First PHP & MySQL is the ultimate learning guide to building dynamic, database-driven websites using PHP and MySQL. Packed with real-world examples, this ...","Image":"http://s.it-ebooks-api.info/3/head_first_php__mysql.jpg","isbn":"9780596006303"},
+    
+    {"ID":4081260866,"Title":"PHP & MySQL: Novice to Ninja, 5th Edition","SubTitle":"The Easy Way to Build Your Own Database Driven Website","Description":"PHP & MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you'll learn how to use PHP (used on 20 million sites worldwide) to build your ...","Image":"http://s.it-ebooks-api.info/7/php__mysql_novice_to_ninja_5th_edition.jpg","isbn":"9780987153081"},
+    
+    {"ID":1061052283,"Title":"Learning PHP, MySQL, and JavaScript","SubTitle":"A Step-by-Step Guide to Creating Dynamic Websites","Description":"If you know HTML, this guide will have you building interactive websites quickly. You'll learn how to create responsive, data-driven websites with PHP, MySQL, and JavaScript, regardless of whether you already know how to program. Discover how the pow ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_and_javascript.jpg","isbn":"9780596157135"},
+    
+    {"ID":112178230,"Title":"Learning PHP, MySQL, JavaScript, and CSS, 2nd Edition","SubTitle":"A Step-by-Step Guide to Creating Dynamic Websites","Description":"Learn how to build interactive, data-driven websites - even if you don't have any previous programming experience. If you know how to build static sites with HTML, this popular guide will help you tackle dynamic web programming. You'll get a thorough ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_javascript_and_css_2nd_edition.jpg","isbn":"9781449319267"},
+    
+    {"ID":1033976387,"Title":"Learning PHP, MySQL, JavaScript, CSS & HTML5, 3rd Edition","SubTitle":"A Step-by-Step Guide to Creating Dynamic Websites","Description":"Build interactive, data-driven websites with the potent combination of open-source technologies and web standards, even if you only have basic HTML knowledge. With this popular hands-on guide, you'll tackle dynamic web programming with the help of to ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_javascript_css__html5_3rd_edition.jpg","isbn":"9781491949467"},
+    
+    {"ID":1348922840,"Title":"Sams Teach Yourself PHP, MySQL & JavaScript All in One, 6th Edition","Description":"In just a short time, you can learn how to use PHP, MySQL, and JavaScript together to create dynamic, interactive websites and applications using three leading web development technologies.nnNo previous programming experience is required. Using a s ...","Image":"http://s.it-ebooks-api.info/12/php_mysql_javascript_all_in_one_6th_edition.jpg","isbn":"9780672337703"}
+    
+    ,{"ID":2608239171,"Title":"Learning PHP, MySQL & JavaScript, 4th Edition","SubTitle":"With jQuery, CSS & HTML5","Description":"Build interactive, data-driven websites with the potent combination of open-source technologies and web standards, even if you have only basic HTML knowledge. With this popular hands-on guide, you'll tackle dynamic web programming with the help of to ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql__javascript_4th_edition.jpg","isbn":"9781491918661"},
+    
+    {"ID":3498693948,"Title":"PHP, MySQL & JavaScript All-in-One For Dummies","Description":"It takes a powerful suite of technologies to drive the most-visited websites in the world. PHP, mySQL, JavaScript, and other web-building languages serve as the foundation for application development and programming projects at all levels of the web. ...","Image":"http://s.it-ebooks-api.info/9/php_mysql_javascript_all-in-one_for_dummies.jpg","isbn":"9781119468387"},
+    
+    {"ID":2518258989,"Title":"Learning PHP, MySQL & JavaScript, 5th Edition","SubTitle":"With jQuery, CSS & HTML5","Description":"Build interactive, data-driven websites with the potent combination of open source technologies and web standards, even if you have only basic HTML knowledge. In this update to this popular hands-on guide, you'll tackle dynamic web programming with t ...","Image":"http://s.it-ebooks-api.info/3/learning_php_mysql_javascript_5th_edition.jpg","isbn":"9781491978917"}
+  ]
+    
+    
+    for(i=0;i<Books.length;i++)
+    {
+        var mainDiv=document.createElement("div");
+        var head=document.createElement("h3");
+        var para=document.createElement("p");
+        var image=document.createElement("img");
+
+        head.addEventListener("click",function(){console.log(this)});
+
+        head.innerHTML=Books[i].Title;
+        para.innerHTML=Books[i].Description;
+        image.src=Books[i].Image;
+
+        mainDiv.appendChild(head);
+        mainDiv.appendChild(para);
+        mainDiv.appendChild(image);
+
+        mainDiv.className="book";
+
+        document.getElementById("main").appendChild(mainDiv);
+    }
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+    table,td,th
+    {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+        .redcolor {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    
+<p id="main"></p>
+    <script>
+    
+    var books=[
+                  {"title":"Varun","content":123,"Image":"http://s.it-ebooks-api.info/3/head_first_php__mysql.jpg","isbn":"9780596006303"},
+                  {"title":"shital","content":123,"Image":"http://s.it-ebooks-api.info/3/head_first_php__mysql.jpg"},
+                  {"title":"mamta","content":123,"Image":"http://s.it-ebooks-api.info/3/head_first_php__mysql.jpg"},
+                  {"title":"manju","content":123,"Image":"http://s.it-ebooks-api.info/3/head_first_php__mysql.jpg"},
+                  
+                  ];
+
+                  for(i=0;i<books.length;i++)
+                  
+                  {   var row = document.createElement("p");
+                     row.innerHTML=books[i].title;
+                    
+                  
+                    document.getElementById("main").appendChild(row);
+                   
+                        var abc = document.createElement("p");
+                     abc.innerHTML=books[i].content;
+                
+
+                    document.getElementById("main").appendChild(abc);
+
+                     var abcd = document.createElement("img");
+                     abcd.src=books[i].Image;
+                
+
+                    document.getElementById("main").appendChild(abcd);
+    }
+                  
+                  
+
+                    
+
+    </script>
+</body>
+
+</html>
