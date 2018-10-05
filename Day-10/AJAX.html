@@ -2,11 +2,9 @@
 <html>
 <body>
 
-<h1>The XMLHttpRequest Object</h1>
 
+<input type="text" name="search" id="search">
 <button type="button" onclick="loadDoc()">Request data</button>
-
-<p>Click the button several times to see if the time changes, or if the file is cached.</p>
 
 <div id="demo"></div>
 
@@ -14,7 +12,10 @@
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange=function() {
+      document.getElementById("demo").innerHTML="<h1 style='color:red'>Loading.....</h1>";
     if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML="";
+
         var Books=JSON.parse(this.responseText).Books;
         for(i=0;i<Books.length;i++)
         {
@@ -25,7 +26,7 @@ function loadDoc() {
         }        
     }
   };
-  xhttp.open("GET", "http://it-ebooks-api.info/v1/search/angular");
+  xhttp.open("GET", "http://it-ebooks-api.info/v1/search/"+document.getElementById("search").value);
   xhttp.send();
 }
 </script>

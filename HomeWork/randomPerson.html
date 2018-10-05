@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <style>
+        .main {
+            width: 80%;
+            margin: auto;
+            height: 400px;
+            border: 1px solid rgba(210,210,210,0.7);
+            border-radius: 5px;
+
+        }
+
+        .top {
+            height: 133px;
+            background-color: #F9F9F9;
+            border-bottom: 1px solid grey;
+        }
+
+        img {
+            position: absolute;
+            top: 30px;
+            left: 400px;
+            border-radius: 50%;
+            border: 1px solid grey;
+            padding: 5px;
+            height: 150px;
+        }
+
+        .content {
+            margin-top: 90px;
+            text-align: center;
+
+        }
+
+        .content>p {
+            color: rgb(200, 200, 200);
+        }
+        .icons
+        {
+            margin-top:50px;
+        }
+
+        .inner {
+            width: 80%;
+            margin: auto;
+        }
+
+        .inner>span>i {
+            padding: 0px 5.5%;
+            font-size: 2rem;
+            color:gray;
+        }
+
+        .greenicon>i
+        {
+            color:green !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="top">
+
+        </div>
+        <div class="bottom">
+            <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+            <div class="content">
+                <p id="para">Hi, my name is</p>
+                <h1 id="data">august haugvaldstad</h1>
+            </div>
+            <div class="icons">
+                <div class="inner" id="inner">
+                    <span onmouseover="setName(this)"><i class="far fa-user"></i></span>
+                    <span onmouseover="setEmail(this)"><i class="fas fa-at"></i></span>
+                    <span onmouseover="setColor(this)"><i class="far fa-calendar-alt"></i></span>
+                    <span onmouseover="setColor(this)"><i class="fas fa-map-marked-alt"></i></span>
+                    <span onmouseover="setColor(this)"><i class="fas fa-phone-volume"></i></span>
+                    <span onmouseover="setColor(this)"><i class="fas fa-unlock-alt"></i></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+        var results = [{ "gender": "male", "name": { "title": "mr", "first": "august", "last": "haugvaldstad" }, "location": { "street": "solfjellshøgda 7536", "city": "lommedalen", "state": "bergen", "postcode": "2230", "coordinates": { "latitude": "54.0986", "longitude": "-94.0009" }, "timezone": { "offset": "+4:30", "description": "Kabul" } }, "email": "august.haugvaldstad@example.com", "login": { "uuid": "14acc719-be3d-497e-a672-e5e76e876b83", "username": "lazydog921", "password": "high", "salt": "T4nYME46", "md5": "25f33d694244e87888c0f4645a121b94", "sha1": "0d6ac06026703d8d645470d5742ada1a98ce0349", "sha256": "c7807326e67c835816884f1e55d3d82f2adc6a69b24a0b2ab97eec957fe9b6f3" }, "dob": { "date": "1964-06-05T21:01:51Z", "age": 54 }, "registered": { "date": "2016-12-06T18:59:08Z", "age": 1 }, "phone": "58544751", "cell": "45748817", "id": { "name": "FN", "value": "05066404686" }, "picture": { "large": "https://randomuser.me/api/portraits/men/47.jpg", "medium": "https://randomuser.me/api/portraits/med/men/47.jpg", "thumbnail": "https://randomuser.me/api/portraits/thumb/men/47.jpg" }, "nat": "NO" }]
+
+        console.log(results);
+
+
+        function setColor(element)
+        {
+                var parentElement=document.getElementById("inner");
+                var nodes=parentElement.getElementsByTagName('span');
+                for(i=0;i<nodes.length;i++)
+                {
+                    nodes[i].className="";
+                }
+                element.className="greenicon";
+        }
+
+        function setName(element)
+        {
+            setColor(element);
+            document.getElementById("para").innerHTML="Hi, My name is";
+            document.getElementById("data").innerHTML= results[0].name.first+" "+results[0].name.last;
+        }
+        function setEmail(element)
+        {
+            setColor(element);
+            document.getElementById("para").innerHTML="My email address is";
+            document.getElementById("data").innerHTML= results[0].email;
+
+        }
+    </script>
+</body>
+
+</html>
