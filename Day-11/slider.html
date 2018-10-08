@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .slider
+    {
+        position: relative;
+        overflow: hidden;
+        height: 1000px;;
+    }
+    .slider>img
+    {
+        position: absolute;
+        top: 0px;
+        left: 100%;
+        width: 100%;
+        transition-duration: 1s;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="slider" id="slider">
+
+        <img src="https://picsum.photos/1000/400/?random" alt="1">
+        <img src="https://picsum.photos/999/400/?random" alt="2">
+        <img src="https://picsum.photos/1001/400/?random" alt="3">
+        <img src="https://picsum.photos/1000/401/?random" alt="4">
+        <img src="https://picsum.photos/1000/399/?random" alt="5">
+    </div>
+
+    <script>
+        var images =document.getElementById("slider").getElementsByTagName('img');
+        var len=images.length;
+        var index=0;
+        function slide()
+        {
+            if(index==len)
+            {
+                for(i=0;i<len;i++)
+                {
+                    images[i].style.left="100%";
+                }
+                index=0;
+            }
+            images[index++].style.left="0px";
+        }
+        setInterval(slide,2000);
+    </script>
+</body>
+</html>
